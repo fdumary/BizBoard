@@ -1,0 +1,87 @@
+:root {
+  --bg: #f5f1e8;
+  --ink: #1f1a14;
+  --panel: #fffdf8;
+  --brand: #0f4c5c;
+  --accent: #e36414;
+  --muted: #6b665f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 20%, #f9e7d7 0%, var(--bg) 50%, #e8dfcf 100%);
+}
+
+a {
+  color: var(--brand);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #e4d8c7;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(31, 26, 20, 0.06);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #ccb9a2;
+  font: inherit;
+}
+
+button {
+  background: var(--brand);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0a3b47;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.card {
+  border-left: 5px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #f6e9da;
+  color: #8a4b19;
+  margin-right: 0.3rem;
+}

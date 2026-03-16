@@ -1,0 +1,16 @@
+{
+  "name": "bizboard",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @bizboard/api & npm run dev -w @bizboard/web",
+    "dev:api": "npm run dev -w @bizboard/api",
+    "dev:web": "npm run dev -w @bizboard/web",
+    "build": "npm run build -w @bizboard/shared && npm run build -w @bizboard/api && npm run build -w @bizboard/web",
+    "typecheck": "npm run typecheck -w @bizboard/shared && npm run typecheck -w @bizboard/api && npm run typecheck -w @bizboard/web"
+  }
+}
