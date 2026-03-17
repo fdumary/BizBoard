@@ -61,7 +61,7 @@ function DashboardPage() {
       <NavigationBar />
 
       <section className="panel">
-        <h1>BizBoard</h1>
+        <h1>Dashboard</h1>
         <p className="muted">Create your public profile card, then share it as a URL or QR code.</p>
       </section>
 

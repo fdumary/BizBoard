@@ -39,7 +39,7 @@ function PublicCardPage() {
 
   return (
     <main className="container">
-      <NavigationBar showBackButton />
+      <NavigationBar />
 
       <section className="panel">
         <h1>{card.title}</h1>

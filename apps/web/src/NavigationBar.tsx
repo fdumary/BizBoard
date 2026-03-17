@@ -9,6 +9,10 @@ function NavigationBar({ showBackButton = false }: NavigationBarProps) {
   const navigate = useNavigate();
   const token = localStorage.getItem("bizboard-token");
 
+  if (location.pathname === "/login") {
+    return null;
+  }
+
   const handleLogout = () => {
     localStorage.removeItem("bizboard-token");
     navigate("/login");
