@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Card, Template } from "@bizboard/shared";
 import { fetchPublicCard } from "../lib/api";
+import { NavigationBar } from "../NavigationBar";
 
 type PublicPayload = {
   card: Card;
@@ -38,6 +39,8 @@ function PublicCardPage() {
 
   return (
     <main className="container">
+      <NavigationBar showBackButton />
+
       <section className="panel">
         <h1>{card.title}</h1>
         <p>{card.bio}</p>

@@ -1,6 +1,8 @@
 import { FormEvent, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import type { Card, Template } from "@bizboard/shared";
 import { createCard, fetchCards, fetchTemplates } from "../lib/api";
+import { NavigationBar } from "../NavigationBar";
 
 function DashboardPage() {
   const [cards, setCards] = useState<Card[]>([]);
@@ -56,6 +58,8 @@ function DashboardPage() {
 
   return (
     <main className="container grid" style={{ gap: "1.2rem" }}>
+      <NavigationBar />
+
       <section className="panel">
         <h1>BizBoard</h1>
         <p className="muted">Create your public profile card, then share it as a URL or QR code.</p>
@@ -101,7 +105,7 @@ function DashboardPage() {
                 <p>{card.bio}</p>
                 <div>
                   <span className="tag">Template: {card.templateId}</span>
-                  <a href={`/public/${card.urlSlug}`}>Open public card</a>
+                  <Link to={`/public/${card.urlSlug}`}>Open public card</Link>
                 </div>
               </article>
             ))}

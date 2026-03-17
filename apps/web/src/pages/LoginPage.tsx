@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../lib/api";
+import { NavigationBar } from "../NavigationBar";
 
 function LoginPage() {
   const [email, setEmail] = useState("demo@bizboard.app");
@@ -26,6 +27,8 @@ function LoginPage() {
 
   return (
     <main className="container">
+      <NavigationBar />
+
       <section className="panel" style={{ maxWidth: "460px", margin: "4rem auto" }}>
         <h1>BizBoard</h1>
         <p className="muted">Create and share your digital business card.</p>
